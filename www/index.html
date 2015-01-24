@@ -30,6 +30,46 @@
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
+      var pushNotification, pushtoken = null;
+
+      function onNotificationAPN (event) {
+      }
+      
+      function onNotification(e) {
+      switch( e.event ){
+      case 'registered':
+      if ( e.regid.length > 0 ){ pushtoken = e.regid; alert(pushtoken); }
+      break;
+      case 'message':
+      if ( e.foreground ){
+      }else{
+      }
+      break;
+      case 'error':
+      alert(e.msg);
+      break;
+      default:
+      break;
+      }
+      };
+
+      document.addEventListener("deviceready", function(){
+      pushNotification = window.plugins.pushNotification;
+      if ( device.platform == 'android' || device.platform == 'Android'){
+      pushNotification.register(function(result){}, function(error){}, {
+      "senderID":"47650578252",
+      "ecb":"onNotification"
+      });
+}else if(device.platform == 'ios'){
+      pushNotification.register(
+      function(token){ pushtoken = token; }, function(err){ }, {
+      "badge":"true",
+      "sound":"true",
+      "alert":"true",
+      "ecb":"onNotificationAPN"
+      });
+      }
+});
       function open_chat(){
       if( window.plugins && window.plugins.Hipmob ) {
       var hipmob_app_id = '2ea7d86854df4ca185af84e68ea72fe1';
@@ -41,7 +81,9 @@
       /*
       * Live chat
       */
-      Hipmob.openChat(hipmob_app_id, { }, success, failure);
+      var options = {};
+      if(pushtoken) options['token'] = pushtoken;
+      Hipmob.openChat(hipmob_app_id, options, success, failure);
       }else{
       alert('Hipmob plugin not available/ready.');
       }
