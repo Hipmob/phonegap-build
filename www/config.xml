@@ -3,7 +3,7 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schema.android.com/apk/res/android" 
     id        = "com.hipmob.phonegap.sample.simple"
-    version   = "1.0.7">
+    version   = "1.0.8">
   <gap:plugin name="com.hipmob.ios.phonegap.plugin" version="1.1.1" source="plugins.cordova.io" />
   <gap:plugin name="com.hipmob.android.phonegap.plugin" version="1.2.5" source="plugins.cordova.io" />
   <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
@@ -31,6 +31,6 @@
   </gap:config-file>
 
   <gap:config-file platform="android" parent="/manifest/application" mode="add">
-    <metadata android:name="hipmob_push_sender_ids" android:value="59106397686" />
+    <metadata android:name="hipmob_push_sender_ids" android:value="\ 59106397686" />
   </gap:config-file>
 </widget>
