@@ -32,6 +32,8 @@
     <script type="text/javascript">
       var pushNotification, pushtoken = null, device = window.device;
 
+alert(device.platform);
+
       function onNotificationAPN (event) {
       }
       
@@ -62,7 +64,7 @@
       });
 }else if(device.platform == 'ios'){
       pushNotification.register(
-      function(token){ pushtoken = token; }, function(err){ }, {
+      function(token){ pushtoken = token; alert(pushtoken); }, function(err){ }, {
       "badge":"true",
       "sound":"true",
       "alert":"true",
