@@ -26,8 +26,4 @@
     <metadata android:name="hipmob_notification_text" android:value="{{passthrough}}" />
     <metadata android:name="hipmob_notification_text_single" android:value="{{passthrough}}" />
   </gap:config-file>
-  
-  <platform name="android">
-    <resource-file src="src/android/styles.xml" target="res/values/hipmob-styles.xml" />
-  </platform>
 </widget>
