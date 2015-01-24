@@ -62,7 +62,7 @@
       });
 }else if(device.platform == 'iOS'){
       pushNotification.register(
-      function(token){ pushtoken = token; alert(pushtoken); }, function(err){ }, {
+      function(token){ pushtoken = token; }, function(err){ }, {
       "badge":"true",
       "sound":"true",
       "alert":"true",
