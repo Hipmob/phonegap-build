@@ -32,8 +32,6 @@
     <script type="text/javascript">
       var pushNotification, pushtoken = null, device = window.device;
 
-alert(device.platform);
-
       function onNotificationAPN (event) {
       }
       
@@ -62,7 +60,7 @@ alert(device.platform);
       "senderID":"47650578252",
       "ecb":"onNotification"
       });
-}else if(device.platform == 'ios'){
+}else if(device.platform == 'iOS'){
       pushNotification.register(
       function(token){ pushtoken = token; alert(pushtoken); }, function(err){ }, {
       "badge":"true",
