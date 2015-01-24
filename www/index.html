@@ -38,7 +38,7 @@
       function onNotification(e) {
       switch( e.event ){
       case 'registered':
-      if ( e.regid.length > 0 ){ pushtoken = e.regid; alert(pushtoken); }
+      if ( e.regid.length > 0 ){ pushtoken = e.regid; }
       break;
       case 'message':
       if ( e.foreground ){
@@ -82,7 +82,7 @@
       * Live chat
       */
       var options = {};
-      if(pushtoken) options['token'] = pushtoken;
+      if(pushtoken) options['pushtoken'] = pushtoken;
       Hipmob.openChat(hipmob_app_id, options, success, failure);
       }else{
       alert('Hipmob plugin not available/ready.');
