@@ -5,7 +5,7 @@
     id        = "com.hipmob.phonegap.sample.simple"
     version   = "1.1.0">
   <gap:plugin name="com.hipmob.ios.phonegap.plugin" version="1.1.6" source="plugins.cordova.io" />
-  <gap:plugin name="com.hipmob.android.phonegap.plugin" version="1.4.2" source="plugins.cordova.io" />
+  <gap:plugin name="com.hipmob.android.phonegap.plugin" version="1.4.3" source="plugins.cordova.io" />
   <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
   <gap:plugin name="org.apache.cordova.device" />
   
