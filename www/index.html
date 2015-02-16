@@ -57,7 +57,7 @@
       pushNotification = window.plugins.pushNotification;
       if ( device.platform == 'android' || device.platform == 'Android'){
       if( window.plugins && window.plugins.Hipmob ) {
-      alert(window.plugins.Hipmob);
+      alert(window.plugins.Hipmob.setupPush);
       window.plugins.Hipmob.setupPush("59106397686");
       }
 }else if(device.platform == 'iOS'){
