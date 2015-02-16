@@ -56,10 +56,7 @@
       document.addEventListener("deviceready", function(){
       pushNotification = window.plugins.pushNotification;
       if ( device.platform == 'android' || device.platform == 'Android'){
-      pushNotification.register(function(result){}, function(error){}, {
-      "senderID":"59106397686",
-      "ecb":"onNotification"
-      });
+      Hipmob.setupPush("59106397686");
 }else if(device.platform == 'iOS'){
       pushNotification.register(
       function(token){ pushtoken = token; }, function(err){ }, {
