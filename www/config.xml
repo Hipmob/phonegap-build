@@ -3,7 +3,7 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schema.android.com/apk/res/android" 
     id        = "com.hipmob.phonegap.sample.simple"
-    version   = "1.1.8">
+    version   = "1.1.9">
   <gap:plugin name="com.hipmob.ios.phonegap.plugin" version="1.1.8" source="plugins.cordova.io" />
   <gap:plugin name="com.hipmob.android.phonegap.plugin" version="1.4.7" source="plugins.cordova.io" />
   <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
@@ -34,17 +34,17 @@
     <meta-data android:name="hipmob_push_sender_ids" android:value="\ 59106397686" />
   </gap:config-file>
 
-  <gap:config-file target="res/xml/config.xml" parent="/*" mode="delete">
+  <gap:config-file platform="android" target="res/xml/config.xml" parent="/*" mode="delete">
     <feature name="PushPlugin" >
       <param name="android-package" value="com.plugin.gcm.PushPlugin"/>
     </feature>
   </gap:config-file>
   
-  <gap:config-file target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
+  <gap:config-file platform="android" target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
     <activity android:name="com.plugin.gcm.PushHandlerActivity" android:exported="true"/>
   </gap:config-file>
 
-  <gap:config-file target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
+  <gap:config-file platform="android" target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
     <receiver android:name="com.plugin.gcm.CordovaGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
       <intent-filter>
 	<action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -54,7 +54,7 @@
     </receiver>
   </gap:config-file>
 
-  <gap:config-file target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
+  <gap:config-file platform="android" target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
     <service android:name="com.plugin.gcm.GCMIntentService" />
   </gap:config-file>
 
