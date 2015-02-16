@@ -56,7 +56,9 @@
       document.addEventListener("deviceready", function(){
       pushNotification = window.plugins.pushNotification;
       if ( device.platform == 'android' || device.platform == 'Android'){
-      Hipmob.setupPush("59106397686");
+      if( window.plugins && window.plugins.Hipmob ) {
+      window.plugins.Hipmob.setupPush("59106397686");
+      }
 }else if(device.platform == 'iOS'){
       pushNotification.register(
       function(token){ pushtoken = token; }, function(err){ }, {
