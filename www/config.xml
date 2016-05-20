@@ -20,7 +20,7 @@
   <author href="http://www.hipmob.com" email="team@hipmob.com">
     Orthogonal Labs, Inc.
   </author>
-  <preference name="phonegap-version" value="5.2.0" />
+  <preference name="phonegap-version" value="cli-5.2.0" />
   
   <gap:config-file platform="android" parent="/manifest/application" mode="add">
     <meta-data android:name="hipmob_notification_text" android:value="{{passthrough}}" />
