@@ -82,6 +82,10 @@
       */
       var options = {};
       if(pushtoken) options['pushtoken'] = pushtoken;
+      options['title'] = 'Chat';
+      options['user'] = '2';
+      options['name'] = 'Mario Pérez';
+      options['email'] = 'mp@hipmob.com';
       Hipmob.openChat(hipmob_app_id, options, success, failure);
       }else{
       alert('Hipmob plugin not available/ready.');
